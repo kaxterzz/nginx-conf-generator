@@ -1,0 +1,2 @@
+https://gist.github.com/cyrusboadway/5a7b715665f33c237996
+https://stackoverflow.com/questions/62440442/using-the-google-domains-dynamic-dns-api-how-can-i-create-both-a-and-aaaa-recor
