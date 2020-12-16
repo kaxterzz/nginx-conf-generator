@@ -6,8 +6,14 @@ die() { echo -e '\e[1;31m'$1'\e[m'; exit 1; }
 # Sanity check
 [ $(id -g) != "0" ] && die "Script must be run as root."
 
+if [ -z "$1" ]
+  then
+    die "client name (without spaces) should be provided."
+fi
+
 #variables
-UP_SERVER_NAME=$(head -n 1 domains.txt | cut -f1 -d".")
+# UP_SERVER_NAME=$(head -n 1 domains.txt | cut -f1 -d".")
+UP_SERVER_NAME=$1
 
 SERVER_NAME=$(while IFS= read -r line; do
         echo -ne "unsubscribe.$line "; 
